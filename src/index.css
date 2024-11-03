@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.square {
+  width: 50px;         /* Set a fixed width */
+  height: 50px;        /* Set a fixed height */
+  font-size: 24px;     /* Adjust the font size for visibility */
+  display: flex;       /* Center content both vertically and horizontally */
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000000; /* Optional: add a border for a better layout */
+}
+
+.board-row {
+  display: flex;
+}
