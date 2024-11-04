@@ -10,7 +10,7 @@ function Square({value, onSquareClick}) {
 
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
-    if (calculateWinner(squares) || squares[i]) {
+    if (calculateWinner(squares) || squares[i] || countSelected(squares) > 5) {
       return;
     }
     const nextSquares = squares.slice();
@@ -94,6 +94,17 @@ export default function Game() {
       </div>
     </div>
   );
+}
+
+function countSelected(squares) {
+  let count = 0;
+  for(let i = 0; i < 9; i++)
+  {
+    if(squares[i]) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 function calculateWinner(squares) {
